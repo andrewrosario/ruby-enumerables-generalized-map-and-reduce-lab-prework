@@ -14,11 +14,8 @@ end
 
 
 def reduce(array, start = array[0])
-  if start == array[0]
-    counter = 1
-  else
-    counter = 0 
-  end
+    counter = 0   
+    counter = 1 if start == array[0]
   while counter < array.length
     n = array[counter]
     start = yield(start, n)
